@@ -20,6 +20,8 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-5px); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans scroll-smooth" x-data="{ loaded: false, copied: false }" x-init="
@@ -70,44 +72,109 @@
             </div>
             <div class="relative group">
                 <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&q=80&w=800" class="rounded-[2rem] shadow-2xl transition duration-500 hover:scale-[1.02]" alt="Kegiatan">
+                <div class="absolute -bottom-6 -left-6 bg-white p-6 rounded-3xl shadow-xl border border-orange-50 hidden md:block">
+                    <p class="text-3xl font-black text-ngejah">15+ Thn</p>
+                    <p class="text-xs font-bold text-gray-400">Mengabdi di Garut</p>
+                </div>
             </div>
         </div>
     </section>
 
     <section id="prestasi" class="py-24 bg-dark-ngejah text-white">
-        <div class="max-w-7xl mx-auto px-4">
-            <div class="grid md:grid-cols-4 gap-8 italic">
-                <div class="md:col-span-1">
-                    <h2 class="text-3xl font-bold leading-tight">Jejak Prestasi</h2>
-                    <p class="text-gray-400 mt-2">Kebanggaan Masyarakat Singajaya.</p>
-                </div>
-                <div class="md:col-span-3 grid sm:grid-cols-2 gap-6">
-                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
-                        <h4 class="font-bold text-orange-400">SATU Indonesia Awards (Astra)</h4>
-                        <p class="text-xs mt-2">Apresiasi nasional bagi penggerak literasi di pelosok Jawa Barat.</p>
-                    </div>
-                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10">
-                        <h4 class="font-bold text-orange-400">Nugra Jasadarma Pustaloka</h4>
-                        <p class="text-xs mt-2">Penghargaan tertinggi dari Perpustakaan Nasional Republik Indonesia.</p>
-                    </div>
-                </div>
+        <div class="max-w-7xl mx-auto px-4 text-center mb-16">
+            <h2 class="text-4xl font-black uppercase tracking-tighter italic">Apresiasi & Penghargaan</h2>
+            <div class="h-1.5 w-20 bg-ngejah mx-auto mt-4 rounded-full"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-6">
+            <div class="bg-white/5 p-8 rounded-3xl border border-white/10 card-hover">
+                <i class="fa-solid fa-trophy text-orange-400 text-3xl mb-4"></i>
+                <h4 class="font-bold text-lg leading-tight mb-2">SATU Indonesia Awards</h4>
+                <p class="text-xs text-gray-400">Penghargaan Nasional dari Astra International atas dedikasi pendidikan di pedesaan.</p>
+            </div>
+            <div class="bg-white/5 p-8 rounded-3xl border border-white/10 card-hover">
+                <i class="fa-solid fa-medal text-orange-400 text-3xl mb-4"></i>
+                <h4 class="font-bold text-lg leading-tight mb-2">Nugra Jasadarma Pustaloka</h4>
+                <p class="text-xs text-gray-400">Apresiasi tertinggi dari Perpustakaan Nasional RI bagi penggerak budaya baca.</p>
+            </div>
+            <div class="bg-white/5 p-8 rounded-3xl border border-white/10 card-hover">
+                <i class="fa-solid fa-award text-orange-400 text-3xl mb-4"></i>
+                <h4 class="font-bold text-lg leading-tight mb-2">Gramedia Reading Community</h4>
+                <p class="text-xs text-gray-400">Juara Regional dalam kompetisi kreativitas taman baca masyarakat di Indonesia.</p>
+            </div>
+            <div class="bg-white/5 p-8 rounded-3xl border border-white/10 card-hover">
+                <i class="fa-solid fa-star text-orange-400 text-3xl mb-4"></i>
+                <h4 class="font-bold text-lg leading-tight mb-2">Local Hero BeritaSatu</h4>
+                <p class="text-xs text-gray-400">Penghargaan atas inisiatif perubahan sosial yang menginspirasi banyak pihak.</p>
             </div>
         </div>
     </section>
 
     <section id="program" class="py-24 bg-white relative">
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-8">
-            <div class="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 shadow-sm">
-                <h3 class="text-xl font-black mb-3 text-ngejah">TBM AIUEO</h3>
-                <p class="text-sm text-gray-600">Pusat baca dan kreativitas anak melalui kelas menulis dan sastra.</p>
+            <div class="p-10 bg-gray-50 rounded-[3rem] border border-gray-100 shadow-sm hover:border-ngejah transition group">
+                <div class="w-14 h-14 bg-orange-100 text-ngejah rounded-2xl flex items-center justify-center mb-6 group-hover:bg-ngejah group-hover:text-white transition">
+                    <i class="fa-solid fa-book-open text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-black mb-3">TBM AIUEO</h3>
+                <p class="text-sm text-gray-600 leading-relaxed italic">Melahirkan penulis dan pembaca kritis dari lereng pegunungan Singajaya.</p>
             </div>
-            <div class="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 shadow-sm">
-                <h3 class="text-xl font-black mb-3 text-blue-600">LPK Alpha Beta</h3>
-                <p class="text-sm text-gray-600">Pelatihan keterampilan komputer dan desain digital siap kerja.</p>
+            <div class="p-10 bg-gray-50 rounded-[3rem] border border-gray-100 shadow-sm hover:border-blue-600 transition group">
+                <div class="w-14 h-14 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+                    <i class="fa-solid fa-laptop-code text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-black mb-3 text-blue-600">LPK Alpha Beta</h3>
+                <p class="text-sm text-gray-600 leading-relaxed italic">Transformasi digital melalui kursus komputer dan desain grafis untuk pemuda desa.</p>
             </div>
-            <div class="p-8 bg-gray-50 rounded-[2.5rem] border border-gray-100 shadow-sm">
-                <h3 class="text-xl font-black mb-3 text-green-600">PKBM Celah Cahaya</h3>
-                <p class="text-sm text-gray-600">Pendidikan kesetaraan (Paket A, B, C) bagi warga belajar.</p>
+            <div class="p-10 bg-gray-50 rounded-[3rem] border border-gray-100 shadow-sm hover:border-green-600 transition group">
+                <div class="w-14 h-14 bg-green-100 text-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-green-600 group-hover:text-white transition">
+                    <i class="fa-solid fa-graduation-cap text-xl"></i>
+                </div>
+                <h3 class="text-2xl font-black mb-3 text-green-600">PKBM Celah Cahaya</h3>
+                <p class="text-sm text-gray-600 leading-relaxed italic">Akses pendidikan kesetaraan Paket A, B, & C demi meningkatkan indeks literasi.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeri" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div>
+                    <h2 class="text-4xl font-black italic tracking-tighter uppercase">Dokumentasi Genggam Literasi</h2>
+                    <p class="text-gray-500 mt-2 font-bold tracking-widest text-xs uppercase">Aksi Nyata Membangun Peradaban di Singajaya</p>
+                </div>
+                <div class="hidden md:block">
+                    <a href="https://komunitasngejah.wordpress.com/" target="_blank" class="text-ngejah font-bold hover:underline">Jelajahi Lebih Banyak <i class="fa-solid fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1544640808-32ca72ac7f37?q=80&w=600" class="rounded-[2rem] shadow-lg w-full h-80 object-cover" alt="Festival Mengejah Hujan">
+                    <div class="px-2">
+                        <h4 class="font-black text-lg">Mengejah Hujan</h4>
+                        <p class="text-xs text-gray-500 mt-1 uppercase tracking-wider font-bold">Event Tahunan</p>
+                        <p class="text-sm text-gray-600 mt-3">Festival seni dan budaya yang menghadirkan sastrawan, pemusik, dan seniman lokal untuk mengapresiasi karya warga.</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <div class="bg-ngejah p-10 rounded-[2.5rem] text-white flex flex-col justify-center h-80 shadow-orange-200 shadow-2xl">
+                        <h4 class="text-3xl font-black mb-4 tracking-tighter italic">Saba Desa</h4>
+                        <p class="text-sm opacity-90 leading-relaxed">Program jemput bola melalui perpustakaan keliling ke pelosok-pelosok kampung untuk mendekatkan buku kepada anak-anak.</p>
+                        <i class="fa-solid fa-truck-fast text-5xl mt-8 opacity-20 self-end"></i>
+                    </div>
+                    <div class="px-2">
+                        <h4 class="font-black text-lg">Gerakan Literasi Pelosok</h4>
+                        <p class="text-xs text-gray-500 mt-1 uppercase tracking-wider font-bold">Mobilisasi Buku</p>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?q=80&w=600" class="rounded-[2rem] shadow-lg w-full h-80 object-cover" alt="Ngejah Cinema">
+                    <div class="px-2">
+                        <h4 class="font-black text-lg">Ngejah Cinema</h4>
+                        <p class="text-xs text-gray-500 mt-1 uppercase tracking-wider font-bold">Edukasi Audio-Visual</p>
+                        <p class="text-sm text-gray-600 mt-3">Nobar film inspiratif yang dilanjutkan dengan sesi diskusi kritis bersama anak-anak dan remaja.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -116,25 +183,25 @@
         <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12">
             <div class="col-span-2">
                 <img src="Logo-ngejah_(1).webp.png" alt="Logo" class="h-20 mb-6">
-                <p class="text-gray-600 max-w-sm mb-8">Bersama Yayasan Komunitas Ngejah, kita nyalakan cahaya ilmu di setiap sudut desa.</p>
+                <p class="text-gray-600 max-w-sm mb-8 leading-relaxed italic">"Ngejah bukan sekadar membaca, tapi mengeja makna kehidupan." - Nero Taopik Abdillah</p>
                 <div class="flex space-x-4">
-                    <a href="https://komunitasngejah.wordpress.com/" target="_blank" class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-orange-50 transition"><i class="fa-brands fa-wordpress"></i></a>
-                    <a href="#" class="w-10 h-10 border rounded-full flex items-center justify-center hover:bg-orange-50 transition"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://komunitasngejah.wordpress.com/" target="_blank" class="w-12 h-12 border rounded-full flex items-center justify-center hover:bg-orange-50 hover:border-ngejah transition"><i class="fa-brands fa-wordpress text-xl"></i></a>
+                    <a href="#" class="w-12 h-12 border rounded-full flex items-center justify-center hover:bg-orange-50 hover:border-ngejah transition"><i class="fa-brands fa-instagram text-xl"></i></a>
                 </div>
             </div>
             
             <div>
-                <h4 class="font-black uppercase tracking-tighter mb-6">Alamat Utama</h4>
+                <h4 class="font-black uppercase tracking-tighter mb-6">Lokasi Singajaya</h4>
                 <p class="text-gray-600 text-sm leading-relaxed">
                     Kampung Sukawangi RT. 001 RW. 001<br>
                     Desa Sukawangi, Kec. Singajaya, <br>
-                    Garut, Jawa Barat.
+                    Kabupaten Garut, Jawa Barat.
                 </p>
             </div>
 
             <div>
                 <h4 class="font-black uppercase tracking-tighter mb-6 text-ngejah">Dukung Kami</h4>
-                <p class="text-gray-600 text-sm mb-6 font-medium">Salurkan donasi atau bergabung sebagai relawan.</p>
+                <p class="text-gray-600 text-sm mb-6 font-medium leading-tight">Ingin berdonasi buku atau membantu gerakan literasi kami?</p>
                 
                 <div class="space-y-3">
                     <a href="https://link.dana.id/qr/081223546686" target="_blank" class="flex items-center justify-center bg-dana text-white py-4 rounded-2xl font-bold shadow-lg hover:shadow-xl transition-all active:scale-95 group">
@@ -143,14 +210,14 @@
                     
                     <button 
                         @click="navigator.clipboard.writeText('081223546686'); copied = true; setTimeout(() => copied = false, 2000)"
-                        class="w-full flex items-center justify-center border-2 border-gray-100 py-3 rounded-2xl text-xs font-bold hover:border-dana transition relative"
+                        class="w-full flex items-center justify-center border-2 border-gray-100 py-3 rounded-2xl text-[11px] font-bold hover:border-dana transition relative"
                     >
-                        <span x-show="!copied">Salin No. DANA: 081223546686</span>
-                        <span x-show="copied" class="text-dana font-black"><i class="fa-solid fa-check mr-2"></i> Nomor Tersalin!</span>
+                        <span x-show="!copied">SALIN NOMOR DANA: 081223546686</span>
+                        <span x-show="copied" class="text-dana font-black"><i class="fa-solid fa-check mr-2"></i> NOMOR TERSALIN!</span>
                     </button>
                     
                     <a href="mailto:ngejah.literasi@gmail.com" class="block text-center text-xs font-bold text-gray-400 hover:text-ngejah transition mt-4">
-                        Daftar Relawan via Email
+                        Kirim Email Konfirmasi / Relawan
                     </a>
                 </div>
             </div>
