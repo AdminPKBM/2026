@@ -24,10 +24,17 @@
         .card-hover:hover { transform: translateY(-5px); }
     </style>
 </head>
-<body class="bg-gray-50 text-gray-800 font-sans scroll-smooth" x-data="{ loaded: false, copied: false }" x-init="
-    loaded = true;
-    setTimeout(() => { fireworkExplosion() }, 500);
-">
+<body class="bg-gray-50 text-gray-800 font-sans scroll-smooth" 
+      x-data="{ loaded: false, copied: false, isPlaying: false }" 
+      @click="if(!isPlaying) { $refs.audio.play(); isPlaying = true }"
+      x-init="
+        loaded = true;
+        setTimeout(() => { fireworkExplosion() }, 500);
+      ">
+
+    <audio x-ref="audio" loop>
+        <source src="https://www.bensound.com/bensound-music/bensound-creativeminds.mp3" type="audio/mpeg">
+    </audio>
 
     <nav class="fixed w-full z-50 glass shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
