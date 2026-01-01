@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yayasan Komunitas Ngejah - Semangat 2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .glass { background: rgba(255, 255, 255, 0.9); backdrop-filter: blur(10px); }
+        .bg-ngejah { background-color: #F37021; } /* Warna Oranye Logo */
+        .text-ngejah { color: #F37021; }
+        [x-cloak] { display: none !important; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="fixed w-full z-50 glass shadow-sm" x-data="{ open: false }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center">
+                    <img src="Logo-ngejah_(1).webp.png" alt="Logo Ngejah" class="h-12 w-auto">
+                    <span class="ml-3 font-bold text-xl tracking-tight hidden md:block">Yayasan Komunitas Ngejah</span>
+                </div>
+                <div class="hidden md:flex space-x-8 font-medium">
+                    <a href="#home" class="hover:text-ngejah transition">Beranda</a>
+                    <a href="#tentang" class="hover:text-ngejah transition">Tentang</a>
+                    <a href="#program" class="hover:text-ngejah transition">Program</a>
+                    <a href="#kontak" class="bg-ngejah text-white px-4 py-2 rounded-full hover:bg-orange-600 transition">Hubungi Kami</a>
+                </div>
+                <div class="md:hidden">
+                    <button @click="open = !open" class="text-gray-600 focus:outline-none">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div x-show="open" x-cloak class="md:hidden bg-white border-t px-4 py-4 space-y-2">
+            <a href="#home" class="block py-2">Beranda</a>
+            <a href="#tentang" class="block py-2">Tentang</a>
+            <a href="#program" class="block py-2">Program</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="absolute top-0 right-0 -z-10 opacity-10">
+            <i class="fa-solid fa-sparkles text-[20rem] text-ngejah rotate-12"></i>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <span class="bg-orange-100 text-ngejah px-4 py-1 rounded-full text-sm font-bold uppercase tracking-widest">Welcome to 2026</span>
+            <h1 class="mt-6 text-5xl md:text-7xl font-extrabold text-gray-900 leading-tight">
+                Membangun Literasi <br>
+                <span class="text-ngejah">Di Tahun Baru 2026</span>
+            </h1>
+            <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+                Terus bergerak, menginspirasi, dan memberdayakan masyarakat melalui pendidikan yang inklusif dan berkelanjutan.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+                <a href="#program" class="bg-gray-900 text-white px-8 py-4 rounded-xl font-bold hover:bg-black transition">Jelajahi Program</a>
+                <a href="#tentang" class="border-2 border-ngejah text-ngejah px-8 py-4 rounded-xl font-bold hover:bg-orange-50 transition">Visi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="program" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl font-bold">Layanan Pendidikan Kami</h2>
+                <div class="h-1 w-20 bg-ngejah mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="group p-8 rounded-3xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-2xl transition duration-300">
+                    <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-ngejah mb-6 group-hover:bg-ngejah group-hover:text-white transition">
+                        <i class="fa-solid fa-book-open text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Taman Baca AIUEO</h3>
+                    <p class="text-gray-600 leading-relaxed">Pusat literasi kreatif untuk menumbuhkan minat baca anak sejak dini dengan metode yang menyenangkan.</p>
+                </div>
+
+                <div class="group p-8 rounded-3xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-2xl transition duration-300">
+                    <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-ngejah mb-6 group-hover:bg-ngejah group-hover:text-white transition">
+                        <i class="fa-solid fa-laptop-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">LPK/LKP Alpha Beta</h3>
+                    <p class="text-gray-600 leading-relaxed">Lembaga Pelatihan Kerja yang berfokus pada pengembangan skill praktis dan kesiapan kerja di era digital.</p>
+                </div>
+
+                <div class="group p-8 rounded-3xl border border-gray-100 bg-gray-50 hover:bg-white hover:shadow-2xl transition duration-300">
+                    <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-ngejah mb-6 group-hover:bg-ngejah group-hover:text-white transition">
+                        <i class="fa-solid fa-graduation-cap text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">PKBM Celah Cahaya</h3>
+                    <p class="text-gray-600 leading-relaxed">Pusat Kegiatan Belajar Masyarakat yang memberikan akses pendidikan kesetaraan bagi semua kalangan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-ngejah">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-white">
+            <div class="mb-6 md:mb-0 text-center md:text-left">
+                <h2 class="text-3xl font-bold">Semangat Baru di Tahun 2026!</h2>
+                <p class="opacity-90">Mari bergabung bersama Komunitas Ngejah untuk perubahan nyata.</p>
+            </div>
+            <div class="text-5xl font-black tracking-tighter">
+                2026 <i class="fa-solid fa-fire-alt ml-2 animate-bounce"></i>
+            </div>
+        </div>
+    </section>
+
+    <footer id="kontak" class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-12">
+            <div class="col-span-2">
+                <img src="Logo-ngejah_(1).webp.png" alt="Logo" class="h-16 mb-6 brightness-200">
+                <p class="text-gray-400 max-w-sm">Yayasan Komunitas Ngejah: Bergerak melalui pendidikan, budaya, dan pemberdayaan ekonomi kreatif.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Navigasi</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><a href="#" class="hover:text-white">Beranda</a></li>
+                    <li><a href="#" class="hover:text-white">Tentang Kami</a></li>
+                    <li><a href="#" class="hover:text-white">Program</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-6">Hubungi Kami</h4>
+                <ul class="space-y-4 text-gray-400">
+                    <li><i class="fa-solid fa-location-dot mr-2"></i> Garut, Jawa Barat</li>
+                    <li><i class="fa-solid fa-envelope mr-2"></i> info@komunitasngejah.org</li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-16 pt-8 border-t border-gray-800 text-center text-gray-500">
+            <p>&copy; 2026 Yayasan Komunitas Ngejah. Built with ❤️ for Literacy.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
